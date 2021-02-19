@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let loc = "London"
     
-    var dataProvider = DataProvoiderProtocol()
+    var dataProvider = DataProvoiderType()
     
     override func viewDidLoad() {
         super.viewDidLoad()

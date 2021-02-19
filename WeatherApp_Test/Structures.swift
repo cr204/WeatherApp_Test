@@ -28,5 +28,17 @@ struct WeatherData {
 
 struct Location {
     let name: String
-    let weather: WeatherData
+    let weather: [WeatherData]
+}
+
+
+struct GoogleData: Decodable {
+    let city: String
+    let temp: [Temperature]
+    
+    struct Temperature: Decodable {
+        let date: String
+        let temp: Int
+        let condition: String
+    }
 }

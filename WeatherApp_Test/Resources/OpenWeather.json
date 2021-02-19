@@ -1,14 +1,13 @@
 {
   "lat": 41.3254,
   "lon": 69.3176,
-  "timezone": "Asia/Tashkent",
+  "city": "Tashkent",
   "timezone_offset": 18000,
   "daily": [
     {
       "dt": "march 1",
       "sunrise": 1613441799,
       "sunset": 1613480234,
-      "unit": "Celcus",
       "temp": {
         "day": 2,
         "min": 1,
@@ -22,11 +21,12 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      },
+      "unit": "Celcus"
     },
     {
       "dt": "march 2",
@@ -46,11 +46,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     },
     {
       "dt": "march 3",
@@ -70,11 +70,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     },
     {
       "dt": "march 4",
@@ -94,11 +94,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     },
     {
       "dt": "march 5",
@@ -118,11 +118,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     },
     {
       "dt": "march 6",
@@ -142,11 +142,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     },
     {
       "dt": "march 7",
@@ -166,11 +166,11 @@
       "wind_speed": 0.43,
       "wind_deg": 64,
       "weather": {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01d"
-        }
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
     }
   ]
 }

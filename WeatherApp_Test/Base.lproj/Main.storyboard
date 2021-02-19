@@ -74,6 +74,15 @@
                                     <action selector="onBtn3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcK-fk-xZO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-dr-0vt">
+                                <rect key="frame" x="326" y="247" width="30" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="°F"/>
+                                <connections>
+                                    <action selector="onUnitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CxR-Ef-T52"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,6 +100,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnUnit" destination="C8p-dr-0vt" id="AlT-by-mE0"/>
                         <outlet property="conditionLabel" destination="Seq-jo-B3n" id="ORp-qU-hME"/>
                         <outlet property="locationName" destination="rkB-7k-tNR" id="68f-UC-xRa"/>
                         <outlet property="tableView" destination="uES-5t-K4g" id="wz9-uF-ysG"/>

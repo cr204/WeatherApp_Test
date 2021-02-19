@@ -19,7 +19,17 @@ class ViewModel {
                 completion(data)
             }
         }
+    }
+    
+    func updateUnit(to: String, completion: () -> Void) {
+        if to == "°F" {
+            data = data.map { WeatherData(date: $0.date, temp: ($0.temp*9/5)+32, condition: $0.condition) }
+        }
+        if to == "°C" {
+            data = data.map { WeatherData(date: $0.date, temp: ($0.temp-32)*5/9, condition: $0.condition) }
+        }
         
+        completion()
     }
 
 }

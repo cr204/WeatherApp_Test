@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnUnit: UIButton!
     
     private let viewModel = ViewModel()
     private let dataService: DataProvoiderType = LocalDataProvider()
+    private var currUnit: String = "°C"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,15 @@ class ViewController: UIViewController {
         self.getWeather(city: "Moscow")
     }
     
+    @IBAction func onUnitTapped(_ sender: UIButton) {
+        guard let label = sender.titleLabel?.text else { return }
+        viewModel.updateUnit(to: label) {
+            currUnit = label == "°C" ? "°F" : "°C"
+            btnUnit.setTitle(currUnit, for: .normal)
+            self.tableView.reloadData()
+        }
+    }
+    
     func getWeather(city: String) {
         viewModel.fetchWeatherData(location: city) { _ in
             DispatchQueue.main.async {
@@ -52,7 +63,7 @@ class ViewController: UIViewController {
     }
     
     func updateWeatherData(day: WeatherData) {
-        tempLabel.text = " \( day.temp > 0 ? "+" : "") \(day.temp) C"
+        tempLabel.text = " \( day.temp > 0 ? "+" : "") \(day.temp) \(currUnit)"
         conditionLabel.text = day.condition.rawValue
     }
     
@@ -65,9 +76,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DayCell") as! DayCell
-        print(viewModel.data[indexPath.row].date)
         cell.labelDay.text = viewModel.data[indexPath.row].date
-        cell.labelTemp.text = "\(viewModel.data[indexPath.row].temp) C"
+        cell.labelTemp.text = "\(viewModel.data[indexPath.row].temp) \(currUnit)"
         return cell
     }
     

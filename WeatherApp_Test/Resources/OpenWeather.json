@@ -1,0 +1,176 @@
+{
+  "lat": 41.3254,
+  "lon": 69.3176,
+  "timezone": "Asia/Tashkent",
+  "timezone_offset": 18000,
+  "daily": [
+    {
+      "dt": "march 1",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 2",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 3",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 4",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 5",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 6",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    },
+    {
+      "dt": "march 7",
+      "sunrise": 1613441799,
+      "sunset": 1613480234,
+      "unit": "Celcus",
+      "temp": {
+        "day": 2,
+        "min": 1,
+        "max": 3,
+        "night": 0,
+        "eve": 1,
+        "morn": 0
+      },
+      "pressure": 1018,
+      "humidity": 27,
+      "wind_speed": 0.43,
+      "wind_deg": 64,
+      "weather": {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+    }
+  ]
+}

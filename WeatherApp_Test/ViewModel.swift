@@ -14,17 +14,34 @@ protocol ViewModelDelegate {
 
 struct ViewModel {
     
-    private let dataService: DataServiceType
     
     
     
-    
-    
-    private func getLocalModels() -> [ServerData]? {
-        guard let filePath = Bundle.main.path(forResource: "servers", ofType: "json")
-            else { return nil }
+    func fetchWeatherData(completion: @escaping ([WeatherData]?) -> Void) {
         
-        return dataService.getJSONData(filePath: filePath)
+//        NetworkService.getJSON(urlString: Links.hotelList) { (listData: [HotelItemData]?) in
+//            if let data = listData {
+//                self.hotels = data
+//                completion(data)
+//            }
+//        }
+        
+        DataProvoider.getData(from: "Local") { (listData) in
+            if let data = listData {
+                print(data)
+                completion(nil)
+            }
+        }
+        
     }
+    
+    
+    
+//    private func getLocalModels() -> [ServerData]? {
+//        guard let filePath = Bundle.main.path(forResource: "servers", ofType: "json")
+//            else { return nil }
+//
+//        return dataService.getJSONData(filePath: filePath)
+//    }
     
 }

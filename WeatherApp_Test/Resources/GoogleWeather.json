@@ -1,0 +1,41 @@
+{
+  "city": "New Yourk",
+  "forecast": [
+    {
+      "date": "march 1",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    },
+    {
+      "date": "march 2",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    },
+    {
+      "date": "march 3",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    },
+    {
+      "date": "march 4",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    },
+    {
+      "date": "march 5",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    },
+    {
+      "date": "march 6",
+      "temp": 5,
+      "condition": "Rainy",
+      "unit": "Celcus"
+    }
+  ]
+}

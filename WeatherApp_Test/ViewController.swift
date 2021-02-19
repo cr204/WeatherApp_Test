@@ -15,27 +15,35 @@ class ViewController: UIViewController {
     
     let loc = "London"
     
-    var dataProvider = DataProvoiderType()
+    private let viewModel = ViewModel()
+    private let dataService: DataProvoiderType = LocalDataProvider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getData()
-    }
-    
-    
-    func getData() {
-        let date = dataProvider.getData()
-        if let day = date {
-            self.updateWeatherData(day: day)
+        
+        viewModel.fetchWeatherData { _ in
+            DispatchQueue.main.async {
+                //self.setupViews()
+                print("updateWeatherData()")
+            }
         }
+        
     }
+    
+    
+//    func getData() {
+//        let date = dataProvider.getData()
+//        if let day = date {
+//            self.updateWeatherData(day: day)
+//        }
+//    }
     
     
     @IBAction func nextDay(_ sender: Any) {
-        let day = dataProvider.nextDay()
-        self.updateWeatherData(day: day)
+//        let day = dataProvider.nextDay()
+//        self.updateWeatherData(day: day)
     }
     
     func updateWeatherData(day: WeatherData) {

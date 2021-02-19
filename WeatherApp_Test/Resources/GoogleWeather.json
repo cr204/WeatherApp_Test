@@ -4,37 +4,37 @@
     {
       "date": "march 1",
       "temp": 5,
-      "condition": "Rainy",
+      "condition": "Sunny",
       "unit": "Celcus"
     },
     {
       "date": "march 2",
-      "temp": 5,
-      "condition": "Rainy",
+      "temp": 2,
+      "condition": "Cloudy",
       "unit": "Celcus"
     },
     {
       "date": "march 3",
-      "temp": 5,
+      "temp": 0,
       "condition": "Rainy",
       "unit": "Celcus"
     },
     {
       "date": "march 4",
-      "temp": 5,
-      "condition": "Rainy",
+      "temp": -5,
+      "condition": "Snowing",
       "unit": "Celcus"
     },
     {
       "date": "march 5",
-      "temp": 5,
+      "temp": -1,
       "condition": "Rainy",
       "unit": "Celcus"
     },
     {
       "date": "march 6",
-      "temp": 5,
-      "condition": "Rainy",
+      "temp": 3,
+      "condition": "Sunny",
       "unit": "Celcus"
     }
   ]

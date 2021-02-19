@@ -19,6 +19,7 @@
 		5A5FD19C25E005BD00FC934B /* OpenWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A5FD19B25E005BD00FC934B /* OpenWeather.json */; };
 		5A5FD1A825E023D900FC934B /* GoogleWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A5FD1A725E023D900FC934B /* GoogleWeather.json */; };
 		5A5FD1AC25E0254C00FC934B /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */; };
+		5A5FD1B425E04AC900FC934B /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B325E04AC900FC934B /* DayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5A5FD19B25E005BD00FC934B /* OpenWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OpenWeather.json; sourceTree = "<group>"; };
 		5A5FD1A725E023D900FC934B /* GoogleWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleWeather.json; sourceTree = "<group>"; };
 		5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		5A5FD1B325E04AC900FC934B /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 				5A136A7825DFC71A00AA0BDC /* SceneDelegate.swift */,
 				5A136A7A25DFC71A00AA0BDC /* ViewController.swift */,
 				5A136A9125DFCED300AA0BDC /* ViewModel.swift */,
-				5A136A8B25DFC85D00AA0BDC /* Structures.swift */,
+				5A5FD1B325E04AC900FC934B /* DayCell.swift */,
 				5A5FD1AA25E0251C00FC934B /* Services */,
+				5A5FD1AE25E04A6D00FC934B /* Model */,
 				5A136A7C25DFC71A00AA0BDC /* Main.storyboard */,
 				5A136A7F25DFC71D00AA0BDC /* Assets.xcassets */,
 				5A136A8125DFC71D00AA0BDC /* LaunchScreen.storyboard */,
@@ -99,6 +102,14 @@
 				5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5A5FD1AE25E04A6D00FC934B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A136A8B25DFC85D00AA0BDC /* Structures.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				5A136A8F25DFCA3A00AA0BDC /* DataProvider.swift in Sources */,
 				5A136A7925DFC71A00AA0BDC /* SceneDelegate.swift in Sources */,
 				5A136A9225DFCED300AA0BDC /* ViewModel.swift in Sources */,
+				5A5FD1B425E04AC900FC934B /* DayCell.swift in Sources */,
 				5A136A8C25DFC85D00AA0BDC /* Structures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

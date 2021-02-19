@@ -42,7 +42,7 @@ struct LocalDataProvider: DataProvoiderType {
     private func decodeToModel(JSONData: Data?, type: ServiceType) -> [WeatherData]? {
         let service = DecodeData<GoogleData>()
         guard let gl = service.decodeToModel(JSONData: JSONData) else { return nil }
-        let wdata = gl.forecast.map { WeatherData(date: $0.date, temp: $0.temp, condition: ConditionType.sunny) }
+        let wdata = gl.forecast.map { WeatherData(date: $0.date, temp: $0.temp, condition: $0.condition) }
         return wdata
     }
 

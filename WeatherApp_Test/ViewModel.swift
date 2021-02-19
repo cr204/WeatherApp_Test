@@ -12,24 +12,16 @@ protocol ViewModelDelegate {
 }
 
 
-struct ViewModel {
+class ViewModel {
     
-    
-    
+    var data: [WeatherData] = []
     
     func fetchWeatherData(completion: @escaping ([WeatherData]?) -> Void) {
         
-//        NetworkService.getJSON(urlString: Links.hotelList) { (listData: [HotelItemData]?) in
-//            if let data = listData {
-//                self.hotels = data
-//                completion(data)
-//            }
-//        }
-        
         DataProvoider.getData(from: "Local") { (listData) in
             if let data = listData {
-                print(data)
-                completion(nil)
+                self.data = data
+                completion(data)
             }
         }
         

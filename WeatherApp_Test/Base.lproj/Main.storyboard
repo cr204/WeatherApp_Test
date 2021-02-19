@@ -46,29 +46,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa3-3C-h8K">
-                                <rect key="frame" x="59" y="353" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Day 1"/>
-                                <connections>
-                                    <action selector="nextDay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eD-Z9-eFM"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uES-5t-K4g">
+                                <rect key="frame" x="0.0" y="279" width="375" height="388"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uES-5t-K4g" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Eav-zv-6g4"/>
+                            <constraint firstItem="uES-5t-K4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VwV-rG-MZw"/>
                             <constraint firstItem="rkB-7k-tNR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="YbM-0J-hTL"/>
                             <constraint firstItem="Seq-jo-B3n" firstAttribute="top" secondItem="rkB-7k-tNR" secondAttribute="bottom" constant="38" id="a1Y-1U-OTm"/>
+                            <constraint firstItem="uES-5t-K4g" firstAttribute="top" secondItem="ieh-tb-aEV" secondAttribute="bottom" constant="15" id="fHl-zb-RrE"/>
                             <constraint firstItem="rkB-7k-tNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fQa-2N-fVi"/>
                             <constraint firstItem="ieh-tb-aEV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8Y-aH-Vbt"/>
                             <constraint firstItem="Seq-jo-B3n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ge7-dI-vPv"/>
                             <constraint firstItem="ieh-tb-aEV" firstAttribute="top" secondItem="Seq-jo-B3n" secondAttribute="bottom" constant="8" id="oY0-KE-RiA"/>
+                            <constraint firstItem="uES-5t-K4g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rGl-CK-fAo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="conditionLabel" destination="Seq-jo-B3n" id="ORp-qU-hME"/>
                         <outlet property="locationName" destination="rkB-7k-tNR" id="68f-UC-xRa"/>
+                        <outlet property="tableView" destination="uES-5t-K4g" id="wz9-uF-ysG"/>
                         <outlet property="tempLabel" destination="ieh-tb-aEV" id="fAJ-YQ-tMS"/>
                     </connections>
                 </viewController>
@@ -80,6 +81,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

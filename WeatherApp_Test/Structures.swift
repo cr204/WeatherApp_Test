@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ConditionType: String, CodingKey {
+enum ConditionType: String, CodingKey, Decodable {
     case sunny = "Sunny"
     case cloud = "Cloudy"
     case rain = "Rainy"
@@ -36,11 +36,10 @@ struct GoogleData: Decodable {
     let city: String
     let forecast: [Temperature]
 
-    
     struct Temperature: Decodable {
         let date: String
         let temp: Int
-        let condition: ConditionType.RawValue
+        let condition: ConditionType
         let unit: String
     }
 }

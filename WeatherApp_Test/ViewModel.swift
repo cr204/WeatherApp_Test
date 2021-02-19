@@ -16,9 +16,9 @@ class ViewModel {
     
     var data: [WeatherData] = []
     
-    func fetchWeatherData(completion: @escaping ([WeatherData]?) -> Void) {
+    func fetchWeatherData(location: String, completion: @escaping ([WeatherData]?) -> Void) {
         
-        DataProvoider.getData(from: "Local") { (listData) in
+        DataProvoider.getData(forLocation: location) { (listData) in
             if let data = listData {
                 self.data = data
                 completion(data)

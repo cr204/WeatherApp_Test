@@ -50,6 +50,30 @@
                                 <rect key="frame" x="0.0" y="279" width="375" height="388"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSh-rG-5LO">
+                                <rect key="frame" x="30" y="20" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New York"/>
+                                <connections>
+                                    <action selector="onBtn1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ML8-6P-sTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btz-xA-GoM">
+                                <rect key="frame" x="161" y="20" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="London"/>
+                                <connections>
+                                    <action selector="onBtn2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCi-VG-sgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfV-Tn-AEc">
+                                <rect key="frame" x="286" y="20" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Moscow"/>
+                                <connections>
+                                    <action selector="onBtn3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcK-fk-xZO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

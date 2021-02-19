@@ -17,7 +17,7 @@ struct MockDataProvider: DataProvoiderType {
     let day6 = WeatherData(date: "march 6", temp: 3, condition: .sunny)
     let day7 = WeatherData(date: "march 7", temp: 5, condition: .sunny)
     
-    func getData(path: String) -> [WeatherData]? {
+    func getData(path: String, serviceType: ServiceType) -> [WeatherData]? {
         return [day1, day2, day3, day4, day5, day6, day7]
     }
 }

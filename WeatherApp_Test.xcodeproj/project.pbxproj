@@ -20,6 +20,7 @@
 		5A5FD1A825E023D900FC934B /* GoogleWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A5FD1A725E023D900FC934B /* GoogleWeather.json */; };
 		5A5FD1AC25E0254C00FC934B /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */; };
 		5A5FD1B425E04AC900FC934B /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B325E04AC900FC934B /* DayCell.swift */; };
+		5A5FD1B725E052B300FC934B /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5A5FD1A725E023D900FC934B /* GoogleWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleWeather.json; sourceTree = "<group>"; };
 		5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		5A5FD1B325E04AC900FC934B /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				5A136A8E25DFCA3A00AA0BDC /* DataProvider.swift */,
 				5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */,
+				5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A5FD1AC25E0254C00FC934B /* MockDataProvider.swift in Sources */,
+				5A5FD1B725E052B300FC934B /* LocalDataProvider.swift in Sources */,
 				5A136A7B25DFC71A00AA0BDC /* ViewController.swift in Sources */,
 				5A136A7725DFC71A00AA0BDC /* AppDelegate.swift in Sources */,
 				5A136A8F25DFCA3A00AA0BDC /* DataProvider.swift in Sources */,

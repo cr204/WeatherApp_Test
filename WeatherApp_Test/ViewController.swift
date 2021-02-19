@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let loc = "London"
-    
     private let viewModel = ViewModel()
     private let dataService: DataProvoiderType = LocalDataProvider()
     
@@ -26,21 +24,34 @@ class ViewController: UIViewController {
         tableView.delegate = self
         self.tableView.register(DayCell.self, forCellReuseIdentifier: "DayCell")
         
-        
-        
-        viewModel.fetchWeatherData { _ in
-            DispatchQueue.main.async {
-                //self.setupViews()
-                print("updateWeatherData()")
-                self.updateWeatherData(day: self.viewModel.data[0])
-            }
-        }
+        self.getWeather(city: "London")
         
     }
     
     
+    @IBAction func onBtn1Tapped(_ sender: Any) {
+        self.getWeather(city: "New York")
+    }
+    
+    @IBAction func onBtn2Tapped(_ sender: Any) {
+        self.getWeather(city: "London")
+    }
+    
+    @IBAction func onBtn3Tapped(_ sender: Any) {
+        self.getWeather(city: "Moscow")
+    }
+    
+    func getWeather(city: String) {
+        viewModel.fetchWeatherData(location: city) { _ in
+            DispatchQueue.main.async {
+                self.locationName.text = city
+                self.updateWeatherData(day: self.viewModel.data[0])
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     func updateWeatherData(day: WeatherData) {
-        locationName.text = loc
         tempLabel.text = " \( day.temp > 0 ? "+" : "") \(day.temp) C"
         conditionLabel.text = day.condition.rawValue
     }
@@ -66,7 +77,6 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(viewModel.data[indexPath.row].date)
         self.updateWeatherData(day: viewModel.data[indexPath.row])
     }
 }

@@ -1,7 +1,7 @@
 {
   "lat": 41.3254,
   "lon": 69.3176,
-  "city": "Tashkent",
+  "city": "New York",
   "timezone_offset": 18000,
   "daily": [
     {
@@ -22,7 +22,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Sunny",
         "description": "clear sky",
         "icon": "01d"
       },
@@ -47,7 +47,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Sunny",
         "description": "clear sky",
         "icon": "01d"
       }
@@ -71,7 +71,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Cloudy",
         "description": "clear sky",
         "icon": "01d"
       }
@@ -95,7 +95,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Rainy",
         "description": "clear sky",
         "icon": "01d"
       }
@@ -119,7 +119,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Snowing",
         "description": "clear sky",
         "icon": "01d"
       }
@@ -143,7 +143,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Snowing",
         "description": "clear sky",
         "icon": "01d"
       }
@@ -167,7 +167,7 @@
       "wind_deg": 64,
       "weather": {
         "id": 800,
-        "main": "Clear",
+        "main": "Cloudy",
         "description": "clear sky",
         "icon": "01d"
       }

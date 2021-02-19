@@ -8,45 +8,45 @@
 import Foundation
 
 protocol DataProvoiderType {
-    func getData(path: String) -> [WeatherData]?
+    func getData(path: String, serviceType: ServiceType) -> [WeatherData]?
 }
-
-struct DataProvoider {
-    
-    static func getData(from: String, completionHandler: @escaping ([WeatherData]?) -> Void) {
-        
-        if let filePath = Bundle.main.path(forResource: "GoogleWeather", ofType: "json") {
-            let local = LocalDataProvider()
-            completionHandler(local.getData(path: filePath))
-        }
-     
-        completionHandler(nil)
-    }
-}
-
-
 
 enum ServiceType {
     case google, yahoo, yandex
 }
 
-struct LocalDataProvider: DataProvoiderType {
-    
-    func getData(path: String) -> [WeatherData]? {
-        guard let contentData = FileManager.default.contents(atPath: path) else { return nil }
-        let jsonString = String(data:contentData, encoding:String.Encoding.utf8)
-        let jsonData = jsonString?.data(using: .utf8)
-        return decodeToModel(JSONData: jsonData, type: .google)
-    }
-    
-    private func decodeToModel(JSONData: Data?, type: ServiceType) -> [WeatherData]? {
-        let service = DecodeData<GoogleData>()
-        guard let gl = service.decodeToModel(JSONData: JSONData) else { return nil }
-        let wdata = gl.forecast.map { WeatherData(date: $0.date, temp: $0.temp, condition: $0.condition) }
-        return wdata
-    }
 
+struct DataProvoider {
+    
+    static func getData(forLocation: String, completionHandler: @escaping ([WeatherData]?) -> Void) {
+
+//        let mock = MockDataProvider()
+//        completionHandler(mock.getData(path: ""))
+
+
+        if forLocation == "London" {
+            if let filePath = Bundle.main.path(forResource: "GoogleWeather", ofType: "json") {
+                let local = LocalDataProvider()
+                completionHandler(local.getData(path: filePath, serviceType: .google))
+            }
+        }
+        
+        if forLocation == "New York" {
+            if let filePath = Bundle.main.path(forResource: "OpenWeather", ofType: "json") {
+                let local = LocalDataProvider()
+                completionHandler(local.getData(path: filePath, serviceType: .yahoo))
+            }
+        }
+        
+
+        completionHandler(nil)
+    }
+    
 }
+
+
+
+
 
 
 struct DecodeData<T:Decodable> {

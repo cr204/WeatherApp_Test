@@ -43,3 +43,22 @@ struct GoogleData: Decodable {
         let unit: String
     }
 }
+
+struct YahooData: Decodable {
+    let city: String
+    let daily: [Temperature]
+
+    struct Temperature: Decodable {
+        struct Temp: Decodable {
+            let day: Int
+        }
+        
+        struct Weather: Decodable {
+            let main: ConditionType
+        }
+        let dt: String
+        let temp: Temp
+        let weather: Weather
+        let unit: String
+    }
+}

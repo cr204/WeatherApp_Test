@@ -14,6 +14,10 @@ enum ConditionType: String, CodingKey, Decodable {
     case snow = "Snowing"
 }
 
+enum ServiceType {
+    case google, yahoo, yandex
+}
+
 struct WeatherData {
     let date: String
     let temp: Int

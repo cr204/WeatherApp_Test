@@ -21,6 +21,7 @@
 		5A5FD1AC25E0254C00FC934B /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */; };
 		5A5FD1B425E04AC900FC934B /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B325E04AC900FC934B /* DayCell.swift */; };
 		5A5FD1B725E052B300FC934B /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */; };
+		5A5FD1BA25E0669B00FC934B /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FD1B925E0669B00FC934B /* NetworkDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		5A5FD1B325E04AC900FC934B /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		5A5FD1B925E0669B00FC934B /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5A136A8E25DFCA3A00AA0BDC /* DataProvider.swift */,
 				5A5FD1AB25E0254C00FC934B /* MockDataProvider.swift */,
 				5A5FD1B625E052B300FC934B /* LocalDataProvider.swift */,
+				5A5FD1B925E0669B00FC934B /* NetworkDataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				5A136A9225DFCED300AA0BDC /* ViewModel.swift in Sources */,
 				5A5FD1B425E04AC900FC934B /* DayCell.swift in Sources */,
 				5A136A8C25DFC85D00AA0BDC /* Structures.swift in Sources */,
+				5A5FD1BA25E0669B00FC934B /* NetworkDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

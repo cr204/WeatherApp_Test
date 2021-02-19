@@ -7,11 +7,6 @@
 
 import Foundation
 
-protocol ViewModelDelegate {
-    func dataLoaded() -> [WeatherData]
-}
-
-
 class ViewModel {
     
     var data: [WeatherData] = []
@@ -26,14 +21,5 @@ class ViewModel {
         }
         
     }
-    
-    
-    
-//    private func getLocalModels() -> [ServerData]? {
-//        guard let filePath = Bundle.main.path(forResource: "servers", ofType: "json")
-//            else { return nil }
-//
-//        return dataService.getJSONData(filePath: filePath)
-//    }
-    
+
 }

@@ -11,7 +11,6 @@ protocol MockDataProviderType: DataProvoiderType {
     func getData() -> [WeatherData]?
 }
 
-
 // MOCK data provider
 struct MockDataProvider: MockDataProviderType {
     let day1 = WeatherData(date: "march 1", temp: 3, condition: .sunny)

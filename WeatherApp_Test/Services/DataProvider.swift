@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DataProvoiderType {
-    func getData(path: String, serviceType: ServiceType) -> [WeatherData]?
+    //func getData(path: String, serviceType: ServiceType) -> [WeatherData]?
 }
 
 enum ServiceType {
@@ -23,23 +23,47 @@ struct DataProvoider {
 //        let mock = MockDataProvider()
 //        completionHandler(mock.getData(path: ""))
 
-
+        let local = LocalDataProvider()
+        
         if forLocation == "London" {
             if let filePath = Bundle.main.path(forResource: "GoogleWeather", ofType: "json") {
-                let local = LocalDataProvider()
-                completionHandler(local.getData(path: filePath, serviceType: .google))
+                completionHandler(decodeToModel(JSONData: local.getData(path: filePath), type: .google))
             }
         }
         
         if forLocation == "New York" {
             if let filePath = Bundle.main.path(forResource: "OpenWeather", ofType: "json") {
-                let local = LocalDataProvider()
-                completionHandler(local.getData(path: filePath, serviceType: .yahoo))
+                completionHandler(decodeToModel(JSONData: local.getData(path: filePath), type: .yahoo))
             }
+        }
+        
+        if forLocation == "Moscow" {
+            let mock = MockDataProvider()
+            completionHandler(mock.getData())
         }
         
 
         completionHandler(nil)
+    }
+    
+    static private func decodeToModel(JSONData: Data?, type: ServiceType) -> [WeatherData]? {
+        
+        switch type {
+        case .google:
+            let service = DecodeData<GoogleData>()
+            guard let model = service.decodeToModel(JSONData: JSONData) else { return nil }
+            let wdata = model.forecast.map { WeatherData(date: $0.date, temp: $0.temp, condition: $0.condition) }
+            return wdata
+        case .yahoo:
+            let service = DecodeData<YahooData>()
+            guard let model = service.decodeToModel(JSONData: JSONData) else { return nil }
+            let wdata = model.daily.map { WeatherData(date: $0.dt, temp: $0.temp.day, condition: $0.weather.main) }
+            return wdata
+        case .yandex:
+            return nil
+        }
+
+        
     }
     
 }
